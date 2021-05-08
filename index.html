@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Project No. - 1</title>
+</head>
+<body>
+<h1 style = 'color: red; text-align:center; font-size: 30px;'>Project No. - 1 (Counter)</h1>
+<hr style = 'border-color: blue;'>
+<br>
+<h1 style = 'color: green; background-color: #ddd;display: inline; border-radius: 5px; padding: 10px 20px;' class="counter-display">(..)</h1>
+<br><br><br>
+<button style = 'color: white; background-color: blue; border-color: black; border-radius: 5px; ' class="counter-minus">Click Here To Decrease Number</button>
+<button style = 'color: white; background-color: red; border-color: black; border-radius: 5px' class="counter-plus">Click Here To Increase Number</button>
+
+
+
+<script>
+let counterDisplayElem = document.querySelector('.counter-display');
+let counterMinusElem = document.querySelector('.counter-minus');
+let counterPlusElem = document.querySelector('.counter-plus');
+
+let count = 0;
+
+updateDisplay();
+
+counterPlusElem.addEventListener("click",()=>{
+    count++;
+    updateDisplay();
+}) ;
+
+counterMinusElem.addEventListener("click",()=>{
+    count--;
+    updateDisplay();
+});
+
+function updateDisplay(){
+    counterDisplayElem.innerHTML = count;
+};
+</script>
+</body>
+</html>
